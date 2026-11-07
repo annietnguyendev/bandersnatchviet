@@ -1,4 +1,4 @@
-vi = {
+viet = {
     "2G": {
         "1R": "PHAEDRA",
         "1S": "TAM GIÁC BERMUDA"
@@ -137,7 +137,7 @@ vi = {
         "1PA": "QUAY LẠI"
     },
     "SS11": {
-        "nsg-SS11-0": "LÀM VIỆC TẠI TUCKERSOFT?",
+        "nsg-SS11-0": "LÀM vietỆC TẠI TUCKERSOFT?",
         "3Ax": "QUAY LẠI"
     },
     "SS12": {
@@ -241,11 +241,11 @@ vi = {
         "3P": "KHÔNG"
     },
     "3L": {
-        "nsg-VisitHaynesChoice": "ĐẾN GẶP BÁC SĨ HAYNES",
+        "nsg-vietsitHaynesChoice": "ĐẾN GẶP BÁC SĨ HAYNES",
         "nsg-FollowColinChoice": "ĐI THEO COLIN"
     },
     "3J": {
-        "nsg-VisitHaynesChoice": "ĐẾN GẶP BÁC SĨ HAYNES",
+        "nsg-vietsitHaynesChoice": "ĐẾN GẶP BÁC SĨ HAYNES",
         "nsg-FollowColinChoice": "ĐI THEO COLIN"
     },
     "5AD": {
