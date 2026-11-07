@@ -4,9 +4,12 @@ With this online(html) video player you can watch `Bandersnatch` episode of `Bla
 
 [Live demo](https://mohetios.github.io/BandersnatchInteractive/)
 
+
 ## How to use
 
 The only thing you need is 5hours video file of `Bandersnatch` episode, Drag & drop the file in [this](https://mohetios.github.io/BandersnatchInteractive/) page and enjoy!
+
+<img width="1189" height="631" alt="Bandersnatch interactive Plaver" src="https://github.com/user-attachments/assets/19c05630-7e3e-4589-9e39-091ab9b195ca" />
 
 ## Screenshot
 
