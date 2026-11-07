@@ -66,7 +66,7 @@
 								<select id="choice-translation">
 									<option value="viet" selected>Vietnamese</option>
 									<option value="ru">Russian</option>
-									<option value="en" selected>English</option>
+									<option value="en">English</option>
 									<option value="fr">French</option>
 								</select>
 								<br>
@@ -203,22 +203,40 @@
 </body>
 
 <script>
-    var select = document.getElementById('choice-translation');
-    select.addEventListener('change',(e)=>{
-      translated_choices = window[select.value];
-      console.log(select.value);
-      momentsBySegment = switch_choices();
-    })
-	translated_choices = window.viet;
-    momentsBySegment = switch_choices();
+    const select = document.getElementById('choice-translation');
+
+    function applyVietnameseChoices() {
+        if (typeof viet !== 'undefined' && typeof switch_choices === 'function') {
+            translated_choices = viet;
+            momentsBySegment = switch_choices();
+            if (select) select.value = 'viet';
+        }
+    }
+
+    // Apply immediately and on full page load
+    applyVietnameseChoices();
+    window.addEventListener('DOMContentLoaded', applyVietnameseChoices);
+    window.addEventListener('load', applyVietnameseChoices);
+
+    if (select) {
+        select.addEventListener('change', () => {
+            translated_choices = window[select.value];
+            if (typeof switch_choices === 'function') {
+                momentsBySegment = switch_choices();
+            }
+        });
+    }
 
     const vid = document.getElementById('video');
-    vid.addEventListener('loadedmetadata', () => {
-      for (let i = 0; i < vid.textTracks.length; i++) {
-        const track = vid.textTracks[i];
-        track.mode = (track.label === 'Tiếng Việt') ? 'showing' : 'disabled';
-      }
-    });
+    if (vid) {
+        vid.addEventListener('loadedmetadata', () => {
+            for (let i = 0; i < vid.textTracks.length; i++) {
+                const track = vid.textTracks[i];
+                track.mode = (track.label === 'Vietnamese' || track.label === 'Tiếng Việt') ? 'showing' : 'disabled';
+            }
+        });
+    }
 </script>
 </html>
+
 
