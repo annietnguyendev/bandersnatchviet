@@ -208,6 +208,8 @@
       console.log(select.value);
       momentsBySegment = switch_choices();
     })
+	translated_choices = window[select.value];
+    momentsBySegment = switch_choices();
 
     const vid = document.getElementById('video');
     vid.addEventListener('loadedmetadata', () => {
